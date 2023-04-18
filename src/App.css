@@ -1,38 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
+
 .App {
   text-align: center;
+  height: 100vh;
+  font-family: 'Chivo Mono', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.activity-form {
+  font-family: 'Chivo Mono', monospace;
+  display: flex;
+  width: 34vw;
+  margin: 20vh auto 5vh;
+  align-items: flex-end;
+  justify-content: space-around;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.activity-form button {
+  font-family: 'Chivo Mono', monospace;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.activity-form div{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.activity-form div input {
+  margin-top: 2vw;
+}
+
+.activity-list {
+  padding: 2vw;
+  border: 2px solid salmon;
+  border-radius: 1vh;
+  width: 30vw;
+  margin: 5vh auto;
+}
+
+.titles,
+.activity-list li {
+  display: flex;
+  margin: auto;
+  width: 30vw;
+  justify-content: space-around;
+  align-items: center ;
+}
+
+.activity-list li:not(:first-of-type) {
+  margin-top: 2vh;
+}
+
+.activity-list span,
+.action,
+.titles span {
+  display: block;
+  min-width: 10vw;
+}
+
+.action {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.action-button {
+  width: 5vh;
+  height: 5vh;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.action-button:first-of-type {
+  margin-right: 1vh;
+}
+
+.action-button img {
+  width: 4vh;
+  height: 4vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.newDiv {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 10;
 }
